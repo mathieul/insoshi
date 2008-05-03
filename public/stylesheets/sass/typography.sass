@@ -1,319 +1,358 @@
-body {
-  font-family: Helvetica, Arial, Univers, Tahoma, sans-serif;
-  font-size: 1em;
-  line-height:  1.05em;  
-}
-p,
-li, 
-th, 
-td {
-  font-size:  14px;
-  line-height:  1.4em;
-}
-li li, li p {
-  font-size: 100%;
-}
-p, 
-ul, 
-ol, 
-blockquote, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6 {
-  display:  block;
-  margin-bottom: 1em;
-}
-h2 {
-  background: url(/images/yellow-grad.jpg) 30px 10px repeat-x;
-  border-bottom: 1px solid #ccc;
-  color: #069;
-  clear: both;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 22px;
-  font-weight: normal;
-  line-height: 1.4em;
-  margin-top: 24px;
-  padding-left: 6px;
-}
-li h2 {font-size: 1em;}
-h2 a, h3 a {
-  font-weight: normal;
-}
-h3 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 20px;
-  font-weight: normal;
-}
-h3.page-title {
-  display: none;
-}
-h4 {
-  border-bottom: 1px solid #eee;
-  clear: both;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1.3em;
-  font-weight: normal;
-  line-height: 1.4em;
-  width: 100%;
-}
-h5 {
-  font-size: 12px;
-  font-weight: bold;
-}
-h6 {
-  font-size: 12px;
-  font-weight: bold;
-  font-style: italic;
-}
-ul li {
-  background: url(/images/bullet.png) top left no-repeat;
-  border: 0;
-  margin: 0 0 .5em 0;
-  padding-left: 24px;
-}
-ol li {
-  list-style: decimal;
-  margin-left: 1.5em;
-}
+body
+  :font-family Helvetica, Arial, Univers, Tahoma, sans-serif
+  :font-size 1em
+  :line-height 1.05em
 
-blockquote {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #666666;
-  background: #ececec;
-  border: 1px solid #ccc;
-  padding: 12px;
-  margin: 1em;
-  font-style: italic;
-}
-code {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1em;
-}
-pre {
-  border: 1px solid #ccc;
-  background: #efefef;
-  margin: 1em 0;
-  padding: 1em;
-}
-a:link,a:visited {
-  color: #069;
-  font-weight: bold;
-  text-decoration: none;
-}
-/* Specific elements */
-p.welcome {
-  color: #fff;
-  font-size: 12px
-}
+p
+  :font-size 14px
+  :line-height 1.4em
+  :display block
+  :margin-bottom 1em
+  .meta
+    :font-size 12px
 
-p.welcome a, p.welcome a:visited {
-  color: #fff;
-  text-decoration: underline;
-}
+li
+  :font-size 14px
+  :line-height 1.4em
+  li, p
+    :font-size 100%
+  h2
+    :font-size 1em
+  p.meta
+    :font-size 12px
 
-#footer p {
-  font-size: 12px;
-  text-align: center;
-}
+th
+  :font-size 14px
+  :line-height 1.4em
+  :font-weight bold
+  :background #C3D9FF
+  :padding 4px 10px 4px 5px
 
-#content div li.more {
-  background: none;
-  border: none;
-  clear: both;
-  float: left;
-  font-size: 12px;
-  text-align: right;
-  width: 100%;
-}
+td
+  :font-size 14px
+  :line-height 1.4em
+  :padding 4px 10px 4px 5px
 
-.meta {
-  color: #aaa;
-  font-size: 12px;
-  line-height: 1.8em;
-}
-p .meta, li p.meta {
-  font-size: 12px;
-}
-.label {
-  font-weight: normal;
-}
-body.blog .comments p, body.forum .reply p {
-  font-size: 12px;
-}
+ul
+  :display block
+  :margin-bottom 1em
+  li
+    :background url(/images/bullet.png) top left no-repeat
+    :border 0
+    :margin 0 0 .5em 0
+    :padding-left 24px
 
-/* Have followed links change color (e.g., in forums). */
-a.show-follow:visited {
-  color: #309;
-  text-decoration: none;
-}
+ol
+  :display block
+  :margin-bottom 1em
+  li
+    :list-style decimal
+    :margin-left 1.5em
 
-/* Alerts and notifications */
-.success {
-  border: 1px solid #FFCC66;
-  background-color: #FFFFCC;
-  font-size: 12px;
-  padding: 6px;
-}
-.notice {
-  border: 1px solid #FFCC66;
-  background-color: #FFFFCC;
-  font-size: 12px;
-  padding: 6px;
-}
-.error {
-  border: 1px solid #FFCC66;
-  background-color: #FFFFCC;
-  font-size: 12px;
-  padding: 6px;
-}
+blockquote
+  :display block
+  :margin-bottom 1em
+  :font-family Georgia, "Times New Roman", Times, serif
+  :color #666666
+  :background #ececec
+  :border 1px solid #ccc
+  :padding 12px
+  :margin 1em
+  :font-style italic
 
-.error,
-.notice, 
-.success    { padding: .8em; margin-bottom: 1em; border: 2px solid #ddd;
-              margin-top: 1em; }
+h2
+  :display block
+  :margin-bottom 1em
+  :background url(/images/yellow-grad.jpg) 30px 10px repeat-x
+  :border-bottom 1px solid #ccc
+  :color #069
+  :clear both
+  :font-family Georgia, "Times New Roman", Times, serif
+  :font-size 22px
+  :font-weight normal
+  :line-height 1.4em
+  :margin-top 24px
+  :padding-left 6px
+  a
+    :font-weight normal
 
-.error      { background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
-.notice     { background: #FFF6BF; color: #514721; border-color: #FFD324; }
-.success    { background: #E6EFC2; color: #264409; border-color: #C6D880; }
+h3
+  :display block
+  :margin-bottom 1em
+  :font-family Georgia, "Times New Roman", Times, serif
+  :font-size 20px
+  :font-weight normal
+  a
+    :font-weight normal
 
+h4
+  :display block
+  :margin-bottom 1em
+  :border-bottom 1px solid #eee
+  :clear both
+  :font-family Georgia, "Times New Roman", Times, serif
+  :font-size 1.3em
+  :font-weight normal
+  :line-height 1.4em
+  :width 100%
 
-.errorExplanation {
-  border: 1px solid #FFCC66;
-  background-color: #FFFFCC;
-  margin-bottom: 1em;
-  padding: 1em;
-}
-.errorExplanation h2 {
-  background: 0;
-  border: 0;
-  font-size: 1.2em;
-  margin-top: 0;
-  padding: 0;
-}
-.pagination {
-  border-bottom: 1px solid #eee;
-  font-size: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  margin-bottom: 12px;
-}
+h5
+  :display block
+  :margin-bottom 1em
+  :font-size 12px
+  :font-weight bold
 
+h6
+  :display block
+  :margin-bottom 1em
+  :font-size 12px
+  :font-weight bold
+  :font-style italic
 
+h3.page-title
+  :display none
 
+code
+  :font-family "Courier New", Courier, monospace
+  :font-size 1em
 
+pre
+  :border 1px solid #ccc
+  :background #efefef
+  :margin 1em 0
+  :padding 1em
 
-/* Forms */
-form {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 1em;
-  margin-bottom: 2em;
-}
-input, textarea {
-  font-family: Helvetica, Arial, Univers, sans-serif;
-  font-size: 12px;
-  padding: 6px 3px
-}
-textarea {
-  line-height: 1.4em;
-}
-label  {
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: .5em;
-}
-input, textarea, select {
-  margin-bottom: 1em;
-}
-input.button, button, input[submit], input[button] {
-  background: #e5e5e5;
-  border: 1px solid #ccc;
-  clear: both;
-  cursor: pointer;
-/*  display: block;*/
-  font-family: Helvetica, Arial, Univers, sans-serif;
-  font-size: 12px;
-  height: 32px;
-  padding: 3px 12px;
-}
-.col1 textarea {
-  width: 478px;
-}
-body.single-col .col1 form input {
-  width: 312px;
-}
-label.checkbox {display: inline; float: left;margin-right: 12px;}
-body.single-col .col1 form input.checkbox {
-  display: inline;
-  float: left;
-  width: auto;
-}
-.form_row {
-  position: relative;
-}
-.form_row.full input {
-  width: 478px;
-}
+a:link, a:visited
+  :color #069
+  :font-weight bold
+  :text-decoration none
 
-#frmSearch {
-  border: 0;
-  margin: 0 0 0 6px;
-  padding: 0;
-  position: relative;
-  zoom: 1;
-}
+p.welcome
+  :color #fff
+  :font-size 12px
 
-#frmSearch input.txt {
-  display: inline;
-  float: left;
-  margin-right: 6px;
-  vertical-align: middle;
-  width: 138px;
-}
-#frmSearch #btnSearch.button {
-  display: inline;
-  clear: none;
-  margin: 0;
-  width: 72px;
-}
+  a, a:visited
+    :color #fff
+    :text-decoration underline
 
-form a.add-recipient {
-  position: absolute;
-  right: 12px;
-  top: 30px;
-}
+#footer p
+  :font-size 12px
+  :text-align center
 
-/* Styles for when the site is (nearly) blank, as for new users. */
+#content div li.more
+  :background none
+  :border none
+  :clear both
+  :float left
+  :font-size 12px
+  :text-align right
+  :width 100%
 
-h3.blankslate {
-  text-align: center;
-}
+.meta
+  :color #aaa
+  :font-size 12px
+  :line-height 1.8em
 
+.label
+  :font-weight normal
 
-/* Tables
--------------------------------------------------------------- */
+body.blog .comments p, body.forum .reply p
+  :font-size 12px
 
-table       { margin-bottom: 1.4em; width:100%; }
-th          { font-weight: bold; background: #C3D9FF; }
-th,td       { padding: 4px 10px 4px 5px; }
-tr.even td  { background: #E5ECF9; }
-tfoot       { font-style: italic; }
-caption     { background: #eee; }
+a.show-follow:visited
+  :color #309
+  :text-decoration none
 
-/* Misc classes
--------------------------------------------------------------- */
+.success
+  :border 1px solid #FFCC66
+  :background-color #FFFFCC
+  :font-size 12px
+  :padding 6px
+  :padding .8em
+  :margin-bottom 1em
+  :border 2px solid #ddd
+  :margin-top 1em
+  :background #E6EFC2
+  :color #264409
+  :border-color #C6D880
 
-em { font-style: italic;}
-strong { font-weight: bold; }
+.notice
+  :border 1px solid #FFCC66
+  :background-color #FFFFCC
+  :font-size 12px
+  :padding 6px
+  :padding .8em
+  :margin-bottom 1em
+  :border 2px solid #ddd
+  :margin-top 1em
+  :background #FFF6BF
+  :color #514721
+  :border-color #FFD324
 
-.small      { font-size: .8em; margin-bottom: 1.875em; line-height: 1.875em; }
-.large      { font-size: 1.2em; line-height: 2.5em; margin-bottom: 1.25em; }
-.hide       { display: none; }
+.error
+  :border 1px solid #FFCC66
+  :background-color #FFFFCC
+  :font-size 12px
+  :padding 6px
+  :padding .8em
+  :margin-bottom 1em
+  :border 2px solid #ddd
+  :margin-top 1em
+  :background #FBE3E4
+  :color #8a1f11
+  :border-color #FBC2C4
 
-.quiet      { color: #666; }
-.loud       { color: #000; }
-.highlight  { background:#ff0; }
-.added      { background:#060; color: #fff; }
-.removed    { background:#900; color: #fff; }
+.errorExplanation
+  :border 1px solid #FFCC66
+  :background-color #FFFFCC
+  :margin-bottom 1em
+  :padding 1em
+  h2
+    :background 0
+    :border 0
+    :font-size 1.2em
+    :margin-top 0
+    :padding 0
+
+.pagination
+  :border-bottom 1px solid #eee
+  :font-size 12px
+  :padding-bottom 12px
+  :text-align center
+  :margin-bottom 12px
+
+form
+  :border-bottom 1px solid #ccc
+  :padding-bottom 1em
+  :margin-bottom 2em
+  a.add-recipient
+    :position absolute
+    :right 12px
+    :top 30px
+
+input
+  :font-family Helvetica, Arial, Univers, sans-serif
+  :font-size 12px
+  :padding 6px 3px
+
+  :margin-bottom 1em
+
+textarea
+  :font-family Helvetica, Arial, Univers, sans-serif
+  :font-size 12px
+  :padding 6px 3px
+
+  :line-height 1.4em
+  :margin-bottom 1em
+
+label
+  :display block
+  :font-size 14px
+  :font-weight bold
+  :margin-bottom .5em
+
+select
+  :margin-bottom 1em
+
+input.button, button, input[submit], input[button]
+  :background #e5e5e5
+  :border 1px solid #ccc
+  :clear both
+  :cursor pointer
+  :font-family Helvetica, Arial, Univers, sans-serif
+  :font-size 12px
+  :height 32px
+  :padding 3px 12px
+
+.col1 textarea
+  :width 478px
+
+body.single-col .col1 form
+  input
+    :width 312px
+  input.checkbox
+    :display inline
+    :float left
+    :width auto
+
+label.checkbox
+  :display inline
+  :float left
+  :margin-right 12px
+
+.form_row
+  :position relative
+
+.form_row.full input
+  :width 478px
+
+#frmSearch
+  :border 0
+  :margin 0 0 0 6px
+  :padding 0
+  :position relative
+  :zoom 1
+  input.txt
+    :display inline
+    :float left
+    :margin-right 6px
+    :vertical-align middle
+    :width 138px
+  #btnSearch.button
+    :display inline
+    :clear none
+    :margin 0
+    :width 72px
+
+h3.blankslate
+  :text-align center
+
+table
+  :margin-bottom 1.4em
+  :width 100%
+
+tr.even td
+  :background #E5ECF9
+
+tfoot
+  :font-style italic
+
+caption
+  :background #eee
+
+em
+  :font-style italic
+
+strong
+  :font-weight bold
+
+.small
+  :font-size .8em
+  :margin-bottom 1.875em
+  :line-height 1.875em
+
+.large
+  :font-size 1.2em
+  :line-height 2.5em
+  :margin-bottom 1.25em
+
+.hide
+  :display none
+
+.quiet
+  :color #666
+
+.loud
+  :color #000
+
+.highlight
+  :background #ff0
+
+.added
+  :background #060
+  :color #fff
+
+.removed
+  :background #900
+  :color #fff
+
