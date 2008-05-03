@@ -1,0 +1,21 @@
+- column_div :type => :primary do
+  = render :partial => 'feed'
+
+- column_div :type => :secondary do
+  = render :partial => "searches/box"
+  - if logged_in?
+    = render :partial => 'requested_contacts'
+    = render :partial => 'messages_preview'
+    = render :partial => 'shared/contacts_preview', :locals => { :person => current_person }
+  - else
+    %h2
+      About Insoshi
+    %p
+      %a{ :href => "http://insoshi.com/" }
+        Insoshi
+      is an open-source project dedicated to making the best
+      social networking platform.
+    %p
+      This is the developer community site for the Insoshi project.
+    %div{ :style => "text-align: center" }
+      = link_to image_tag("button_signup.png"), signup_path

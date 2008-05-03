@@ -1,0 +1,23 @@
+- column_div :type => :primary do
+  %h2
+    Sign in
+  - form_tag session_path do
+    .form_row
+      %label{ :for => "username" }
+        Email address
+      = text_field_tag 'email', params[:email], :maxlength => Person::MAX_EMAIL
+    = set_focus_to_id "email"
+    .form_row
+      %label{ :for => "password" }
+        Password
+      = password_field_tag 'password', params[:password], :maxlength => Person::MAX_PASSWORD
+    .form_row
+      %label.checkbox{ :for => "remember_me" }
+        Remember me:
+      = check_box_tag 'remember_me', '1', true, :class => "checkbox"
+    .form_row
+      = submit_tag 'Sign in', :class => "button"
+      %p
+        or <%= link_to "Sign up", signup_path %>
+    %p.form_row
+      = link_to "I forgot my password!", new_password_reminder_path

@@ -1,0 +1,57 @@
+!!! Strict
+%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
+    %title
+      Insoshi Open Source Social Networking Platform
+    = stylesheet_link_tag "default"
+    = javascript_include_tag :defaults
+
+  %body{ :class => @body }
+    #header-wrap
+      #header
+        %h1
+          = link_to image_tag("logo-insoshi.png", :alt => "Insoshi - Social Software"), home_path, :title => "Return to Insoshi homepage"
+        %ul#nav
+          - menu.each do |link|
+            = menu_li link
+        %p.welcome
+          - if logged_in?
+            = "Welcome, #{h(current_person.name)}!"
+            = "(#{link_to "Sign out", logout_path})"
+            - if current_person.admin?
+              %br
+              - if admin_view?
+                = link_to "Standard view", home_path
+              - else
+                = link_to "Admin view", admin_preferences_path
+          - else
+            = link_to "Sign in", login_path
+            or
+            = link_to "Sign up", signup_path
+            %br
+            = link_to "I forgot my password", new_password_reminder_path
+
+    #wrap
+      #content
+        - flash.each do |key, msg|
+          = content_tag :p, msg, :class => "flash #{key}"
+        = yield
+        #footer
+          %p#footer-nav
+            = link_to "Home", home_path
+            |
+            = link_to "Messages", messages_path
+            |
+            = link_to "People", people_path
+            |
+            = link_to "Forum", forums_path
+          %p
+            Powered by
+            %a{ :href => "http://insoshi.com/" }
+              Insoshi open-source social networking platform
+      - if development?
+        %div
+          = render :partial => 'shared/debug'
+
+    = global_prefs.analytics
